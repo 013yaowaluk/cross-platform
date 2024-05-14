@@ -1,0 +1,50 @@
+<UI>:
+    id:scr_manager
+    Scr1:
+    Scr2:
+##########################หน้าที่1#############################
+<Scr1>:
+    name: "Scr1"
+    canvas.before:
+        Rectangle:
+            source:"123.jpg"
+            size: root.width, root.height
+            pos: self.pos
+    Button:
+        text: 'แปลงเลขฐาน'
+        font_name:"tahoma"
+        on_press: app.root.current = "Scr2"
+        size_hint: 0.5, 0.3
+        pos_hint: {'center_x': 0.50, 'center_y': 0.25}
+##########################หน้าที่2#############################
+<Scr2>:
+    name: "Scr2"
+    BoxLayout:
+        orientation: 'vertical'
+        TextInput:
+            id:txt_number
+            hint_text:"เลข"
+            font_size:"25"
+            font_name:"tahoma"
+            size_hint: 1, 0.35
+        BoxLayout:
+            ToggleButton:
+                text:"base2"
+                group:"convert_mode"
+                on_press: root.convert(*args)
+            ToggleButton:
+                text:"base8"
+                group:"convert_mode"
+                on_press: root.convert(*args) 
+            ToggleButton:
+                text:"base16"
+                group:"convert_mode"
+                on_press: root.convert(*args)   
+        Label:
+            id:lbl_output
+            text:"เลขฐาน2 =" 
+            font_size:"25"
+            size_hint: 1, 0.35 
+            font_name:"tahoma"
+                
+    
