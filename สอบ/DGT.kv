@@ -1,0 +1,120 @@
+<Screen1>:
+    canvas.before:
+        Color:
+            rgba: 0.7, 0.5, 0.8, 1
+        Rectangle:
+            size: self.size
+            pos: self.pos
+    BoxLayout:
+        orientation: 'vertical' 
+        padding: 20
+
+        Button:
+            text: 'เข้าสู่ระบบ'
+            background_color: 242,255, 0, 0.81  # สีเหลืองอ่อน (RGBA: 244, 208, 63)
+            font_name: 'tahoma'
+            color: 0, 0, 0, 1  # ฟอนต์สีดำ
+            size_hint_y: None
+            height: '50dp'  # กำหนดความสูงให้กับปุ่ม
+        Button:
+            text: 'ลงทะเบียนใม่'
+            background_color: 0.2, 0, 0.4, 0.61  # สีม่วงเข้ม (RGBA: 51, 0, 102)
+            font_name: 'tahoma'
+            color: 0, 0, 0, 1  # ฟอนต์สีดำ
+            size_hint_y: None
+            height: '50dp'  # กำหนดความสูงให้กับปุ่ม
+            background_color: 0.5, 0, 1, 1
+            on_release: app.root.current = 'register'
+        Button:
+            text: 'for foreigner'
+            background_color: 0, 0.5, 1, 1  # สีฟ้า (RGBA: 0, 128, 255)
+            font_name: 'tahoma'
+            color: 0, 0, 0, 1  # ฟอนต์สีดำ
+            size_hint_y: None
+            height: '50dp'  # กำหนดความสูงให้กับปุ่ม
+
+<Screen2>:
+    canvas.before:
+        Color:
+            rgba: 0.7, 0.5, 0.8, 1 
+        Rectangle:
+            size: self.size
+            pos: self.pos
+
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 20
+
+        Label:
+            text: 'ระบบการอบรมใบอนุญาตขับรถ'
+            color: 0, 0, 0, 1
+            font_size: 40
+            font_name:"tahoma"
+        Label:
+            text: 'ลงทะเบียนเข้ารับการอบรม'
+            color: 0, 0, 0, 1
+            font_size: 20
+            font_name:"tahoma"
+        TextInput:
+            id: id_card_input
+            hint_text: 'ระบุเลขบัตรประชาชน'
+            font_size: 20
+            font_name:"tahoma"
+        TextInput:
+            id: id2_card_input
+            hint_text: 'ระบุเลขบัตรประชาชนอีกครั้ง'
+            font_size: 20
+            font_name:"tahoma"
+        TextInput:
+            id: phone_number_input
+            hint_text: 'ระบุเบอร์เบอร์โทรศัพท์'
+            font_size: 20
+            font_name:"tahoma"
+        TextInput:
+            id: email_input
+            hint_text: 'ระบุอีเมล'
+            font_size: 20
+            font_name:"tahoma"
+        Label:
+            text: 'กรุณาระบุ วันเดือนปี พ.ศ. เกิดให้ถูกต้อง'
+            color: 1, 0, 0, 1
+            font_size: 40
+            font_name:"tahoma"
+        TextInput:
+            id: dey_input
+            hint_text: 'วัน'
+            font_size: 20
+            font_name:"tahoma"
+        TextInput:
+            id: month_input
+            hint_text: 'เดือน'
+            font_size: 20
+            font_name:"tahoma"
+        TextInput:
+            id: year_input
+            hint_text: 'ปี'
+            font_size: 20
+            font_name:"tahoma"
+        Label:
+        Button:
+            id: btn_regis
+            text: 'ดำเนินการต่อ'
+            font_name:"tahoma"
+            background_color: 0.5, 0, 1, 1
+            on_release: root.check_data()
+
+<SecondScreen>:
+    canvas.before:
+        Color:
+            rgba: 0.7, 0.5, 0.8, 1
+        Rectangle:
+            size: self.size
+            pos: self.pos
+
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 20
+
+        Label:
+            text: 'หน้าที่สอง'
+            font_size: 20
